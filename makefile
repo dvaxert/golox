@@ -36,7 +36,7 @@ clean:
 # Run specific binary (example: make run CMD=server)
 .PHONY: run
 run:
-	$(GO) run ./cmd/$(CMD)
+	$(GO) run ./cmd/$(CMD) $(ARGS)
 
 # Run tests
 .PHONY: test
@@ -52,4 +52,3 @@ help:
 	@echo "  run CMD=x - Run command (e.g. make run CMD=cli)"
 	@echo "  test      - Run all tests"
 	@echo "  tidy      - Run go mod tidy"
-	
